@@ -1,0 +1,80 @@
+[project]
+name = "databus"
+version = "0.1.0"
+description = "Python SDK and command-line toolkit for GTFS data processing, validation, and analysis. Provides programmatic access to Databús APIs, GTFS manipulation utilities, data conversion tools, and automated testing frameworks for transit data workflows and research applications."
+readme = "README.md"
+authors = [
+    { name = "Fabián Abarca", email = "ensinergia@gmail.com" }
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Other/Nonlisted Topic",
+]
+keywords = ["gtfs", "transit", "transportation", "data-processing", "validation", "api"]
+dependencies = [
+    "requests>=2.31.0",
+    "pandas>=2.0.0",
+    "click>=8.0.0",
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "gtfs-kit>=6.0.0",
+    "shapely>=2.0.0",
+    "geopandas>=0.14.0",
+    "pyarrow>=12.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.3.0",
+]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocstrings[python]>=0.22.0",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.11.0",
+    "responses>=0.23.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/fabianabarca/databus-py"
+Documentation = "https://databus-py.readthedocs.io"
+Repository = "https://github.com/fabianabarca/databus-py.git"
+"Bug Tracker" = "https://github.com/fabianabarca/databus-py/issues"
+
+[project.scripts]
+databus = "databus.cli:main"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]
