@@ -1,7 +1,9 @@
-# Databús Python SDK
+<img width="250" alt="databus" src="https://github.com/user-attachments/assets/b2ad45ac-83e5-44cf-a93e-898868763530" />
+
+# Python SDK
 
 [![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Code Style](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
 
 Python SDK and command-line toolkit for GTFS data processing, validation, and analysis. Provides programmatic access to Databús APIs, GTFS manipulation utilities, data conversion tools, and automated testing frameworks for transit data workflows and research applications.
